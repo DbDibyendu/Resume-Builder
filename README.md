@@ -39,5 +39,5 @@ $ python3 manage.py runserver
 
 ### Contributers           
 - Back End : [Dibyendu](https://github.com/DbDibyendu)
-- Front End :  [Eshita](https://github.com/eshitachandwani), [Abhinil](https://github.com/abhinil07)
+- Front End :  [Eshita](https://github.com/eshitachandwani)
 
