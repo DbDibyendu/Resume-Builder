@@ -37,7 +37,6 @@ $ python3 manage.py runserver
 
 - Javascript has been used for converting html page to pdf, for saving the resume in pdf format
 
-### Authors
-- Project Idea and Back End : [Me](https://github.com/DbDibyendu)              
+### Contributers           
 - Front End : [Abhinil](https://github.com/abhinil07) ,  [Eshita](https://github.com/eshitachandwani)
 
