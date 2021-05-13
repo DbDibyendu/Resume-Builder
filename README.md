@@ -1,5 +1,5 @@
 
-<img src="https://github.com/DbDibyendu/Resume-Builder/blob/main/main/static/images/Resume-Builder.png?raw=true" width="150">
+<img src="https://github.com/DbDibyendu/Resume-Builder/blob/main/main/static/images/resume.png?raw=true" width="150">
 
 # Resume-Builder
 
@@ -21,12 +21,14 @@ What things you need to install the software and how to install them
           
 2 Install Django
 ```
-$ python -m pip install Django
+$ python3 -m pip install Django
 ```
 ##### Testing on local Server
-Clone this repository 
+Clone this repository onto your system
 ```
 $ cd Resume-Builder
+$ python3 manage.py makemigrations
+$ python3 manage.py migrate
 $ python3 manage.py runserver
 ```
 ### Basic Architecture of the Project
@@ -35,7 +37,7 @@ $ python3 manage.py runserver
 
 - Javascript has been used for converting html page to pdf, for saving the resume in pdf format
 
-### Authors
-- Project Idea and Back End : [Me](https://github.com/DbDibyendu)              
-- Front End : [Abhinil](https://github.com/abhinil07)
+### Contributers           
+- Back End : [Dibyendu](https://github.com/DbDibyendu)
+- Front End :  [Eshita](https://github.com/eshitachandwani)
 
