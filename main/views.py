@@ -59,7 +59,7 @@ def resume(request):
     resumes = request.user.info_set.all().filter()
     # resumes = reversed(list(resumes))
     context = {'resumes': resumes}
-    return render(request, 'resume.html', context)
+    return render(request, 'dashboard.html', context)
 
 
 @login_required(login_url='login')
@@ -106,16 +106,19 @@ def create_resume(request):
         start_pg1 = request.POST.get("start_pg1")
         end_pg1 = request.POST.get("end_pg1")
         pg1_info = request.POST.get("pg1_info")
+        pj1_link = request.POST.get("pj1_link")
 
         pj2 = request.POST.get("pj2")
         start_pg2 = request.POST.get("start_pg2")
         end_pg2 = request.POST.get("end_pg2")
         pg2_info = request.POST.get("pg2_info")
+        pj2_link = request.POST.get("pj2_link")
 
         pj3 = request.POST.get("pj3")
         start_pg3 = request.POST.get("start_pg3")
         end_pg3 = request.POST.get("end_pg3")
         pg3_info = request.POST.get("pg3_info")
+        pj3_link = request.POST.get("pj3_link")
 
         Achievments = request.POST.get("Achievments")
         Skills = request.POST.get("Skills")
@@ -129,7 +132,7 @@ def create_resume(request):
                        email=email, dep=dep, roll=roll, github=github, linkedin=linkedin, portfolio=portfolio,
                        clg=clg, clg_cg=clg_cg, start_clg=start_clg, end_clg=end_clg, edu=edu, edu_cg=edu_cg, start_edu=start_edu,
                        end_edu=end_edu, exp1=exp1, start_exp1=start_exp1, end_exp1=end_exp1, exp2=exp2, start_exp2=start_exp2,
-                       end_exp2=end_exp2, exp3=exp3, start_exp3=start_exp3, end_exp3=end_exp3, pj1=pj1,
+                       pj1_link=pj1_link,pj2_link=pj2_link,pj3_link=pj3_link,end_exp2=end_exp2, exp3=exp3, start_exp3=start_exp3, end_exp3=end_exp3, pj1=pj1,
                        start_pg1=start_pg1, end_pg1=end_pg1, pj2=pj2, start_pg2=start_pg2, end_pg2=end_pg2, pj3=pj3,
                        pg3_info=pg3_info, pg2_info=pg2_info, pg1_info=pg1_info, exp1_info=exp1_info, exp2_info=exp2_info, exp3_info=exp3_info,
                        start_pg3=start_pg3, end_pg3=end_pg3, Achievments=Achievments, Skills=Skills, Por=Por, Hobbies=Hobbies)
@@ -187,16 +190,19 @@ def update_resume(request, pk):
         start_pg1 = request.POST.get("start_pg1")
         end_pg1 = request.POST.get("end_pg1")
         pg1_info = request.POST.get("pg1_info")
+        pj1_link = request.POST.get("pj1_link")
 
         pj2 = request.POST.get("pj2")
         start_pg2 = request.POST.get("start_pg2")
         end_pg2 = request.POST.get("end_pg2")
         pg2_info = request.POST.get("pg2_info")
+        pj2_link = request.POST.get("pj2_link")
 
         pj3 = request.POST.get("pj3")
         start_pg3 = request.POST.get("start_pg3")
         end_pg3 = request.POST.get("end_pg3")
         pg3_info = request.POST.get("pg3_info")
+        pj3_link = request.POST.get("pj3_link")
 
         Achievments = request.POST.get("Achievments")
         Skills = request.POST.get("Skills")
@@ -209,7 +215,7 @@ def update_resume(request, pk):
                    email=email, dep=dep, roll=roll, github=github, linkedin=linkedin, portfolio=portfolio,
                    clg=clg, clg_cg=clg_cg, start_clg=start_clg, end_clg=end_clg, edu=edu, edu_cg=edu_cg, start_edu=start_edu,
                    end_edu=end_edu, exp1=exp1, start_exp1=start_exp1, end_exp1=end_exp1, exp2=exp2, start_exp2=start_exp2,
-                   end_exp2=end_exp2, exp3=exp3, start_exp3=start_exp3, end_exp3=end_exp3, pj1=pj1,
+                   pj1_link=pj1_link,pj2_link=pj2_link,pj3_link=pj3_link,end_exp2=end_exp2, exp3=exp3, start_exp3=start_exp3, end_exp3=end_exp3, pj1=pj1,
                    start_pg1=start_pg1, end_pg1=end_pg1, pj2=pj2, start_pg2=start_pg2, end_pg2=end_pg2, pj3=pj3,
                    pg3_info=pg3_info, pg2_info=pg2_info, pg1_info=pg1_info, exp1_info=exp1_info, exp2_info=exp2_info, exp3_info=exp3_info,
                    start_pg3=start_pg3, end_pg3=end_pg3, Achievments=Achievments, Skills=Skills, Por=Por, Hobbies=Hobbies)
@@ -249,6 +255,7 @@ def view_template1(request, pk):
     resume = Info.objects.get(id=pk)
     context = {"resume": resume}
     return render(request, 'kgp_template.html', context)
+
 
 @login_required(login_url='login')
 def view_template2(request, pk):

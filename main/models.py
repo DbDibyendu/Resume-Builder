@@ -45,16 +45,19 @@ class Info(models.Model):
     start_pg1 = models.CharField(max_length=100, null=True)
     end_pg1 = models.CharField(max_length=100, null=True)
     pg1_info = models.TextField(max_length=10000, null=True)
+    pj1_link = models.CharField(max_length=100, null=True)
 
     pj2 = models.CharField(max_length=100, null=True)
     start_pg2 = models.CharField(max_length=100, null=True)
     end_pg2 = models.CharField(max_length=100, null=True)
     pg2_info = models.TextField(max_length=10000, null=True)
+    pj2_link = models.CharField(max_length=100, null=True)
 
     pj3 = models.CharField(max_length=100, null=True)
     start_pg3 = models.CharField(max_length=100, null=True)
     end_pg3 = models.CharField(max_length=100, null=True)
     pg3_info = models.TextField(max_length=10000, null=True)
+    pj3_link = models.CharField(max_length=100, null=True)
 
     Achievments = models.TextField(max_length=10000, null=True)
     Skills = models.TextField(max_length=10000, null=True)
