@@ -59,7 +59,7 @@ def resume(request):
     resumes = request.user.info_set.all().filter()
     # resumes = reversed(list(resumes))
     context = {'resumes': resumes}
-    return render(request, 'dashboard.html', context)
+    return render(request, 'resume.html', context)
 
 
 @login_required(login_url='login')
