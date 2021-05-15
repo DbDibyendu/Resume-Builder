@@ -29,7 +29,12 @@
     border-width: 0.0001px;
 }
 
-a {
+.new {
+    position: absolute;
+    top: 60px;
+}
+
+a.click {
     color: white;
     text-decoration: none;
     border-width: 0.0001px;
@@ -40,8 +45,8 @@ a {
     padding: 10px;
 }
 
-a:link,
-a:visited {
+a.click:link,
+a.click:visited {
     color: white;
     text-decoration: none;
     border-width: 0.0001px;
@@ -52,7 +57,7 @@ a:visited {
     padding: 10px;
 }
 
-a:hover {
+a.click:hover {
     border-width: 0.2px;
     border-color: white;
     border-radius: 2px;
