@@ -1,1 +1,1 @@
-web: guicorn resume_builder --log-file -
+web: gunicorn resume_builder --log-file -
