@@ -261,4 +261,10 @@ def view_template1(request, pk):
 def view_template2(request, pk):
     resume = Info.objects.get(id=pk)
     context = {"resume": resume}
-    return render(request, 'template1.html', context)
+    return render(request, 'bombay_template.html', context)
+
+@login_required(login_url='login')
+def view_template3(request, pk):
+    resume = Info.objects.get(id=pk)
+    context = {"resume": resume}
+    return render(request, 'delhi_template.html', context)

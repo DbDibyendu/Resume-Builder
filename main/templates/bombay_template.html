@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <title>Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%  static  'css/kgp.css'  %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <script src="{%  static  'js/pdf.js'  %}"></script>
+</head>
+
+<body>
+    <div id="w">
+        <header class="container">
+            <div>
+                <img src="https://www.cse.iitb.ac.in/~ankitraj/iitb.png"> </div>
+            <div>{{resume.firstname}} {{resume.lastname}}<span> | </span>{{resume.roll}}<br>{{resume.dep}}</div>
+            <div class="right_info">
+
+                <a href="{{resume.github}} ">Github</a>
+                <br>
+                <a href="{{resume.linkedin}} ">LinkedIn</a>
+                <br> Contact: {{resume.phone}}<br>
+                <a href="">{{resume.email}}</a>
+                <br>
+            </div>
+        </header>
+        <hr>
+        <div class="container">
+            {% if resume.pj1 or resume.pj2 or resume.pj3 %}
+            <div class="maintitle">Projects Undertaken</div>
+            {% if resume.pj1 %}
+            <div class="title">{{resume.pj1}}</div>
+            <div class="date">{{resume.start_pg1}} to {{resume.end_pg1}}</div>
+            <div class="decsription ">{{resume.pg1_info|linebreaks}} {% if resume.pj1_link %}
+                <a href="{{resume.pj1_link}}">Project Link</a> {% endif %}
+            </div>
+            {% endif %} {% if resume.pj2 %}
+            <div class="title">{{resume.pj2}}</div>
+            <div class="date">{{resume.start_pg2}} to {{resume.end_pg2}}</div>
+            <div class="decsription ">{{resume.pg2_info|linebreaks}} {% if resume.pj2_link %}
+                <a href="{{resume.pj2_link}}">Project Link</a> {% endif %}
+            </div>
+            {% endif %} {% if resume.pj3 %}
+            <div class="title">{{resume.pj3}}</div>
+            <div class="date">{{resume.start_pg3}} to {{resume.end_pg3}}</div>
+            <div class="decsription ">{{resume.pg3_info|linebreaks}} {% if resume.pj3_link %}
+                <a href="{{resume.pj3_link}}">Project Link</a> {% endif %}
+            </div>
+
+
+
+            {% endif %} <br>{% endif %} {% if resume.exp1 or resume.exp2 or resume.exp3 %}
+            <div class="maintitle">Experience</div>
+            {% if resume.exp1 %}
+            <div class="title">{{resume.exp1}}</div>
+            <div class="date">{{resume.start_exp1}} to {{resume.end_exp1}}</div>
+            <div class="decsription ">{{resume.exp1_info|linebreaks}}
+            </div>
+            {% endif %} {% if resume.exp2 %}
+            <div class="title">{{resume.exp2}}</div>
+            <div class="date">{{resume.start_exp2}} to {{resume.end_exp2}}</div>
+            <div class="decsription ">{{resume.exp2_info|linebreaks}}
+            </div>
+            {% endif %} {% if resume.exp3 %}
+            <div class="title">{{resume.exp3}}</div>
+            <div class="date">{{resume.start_exp3}} to {{resume.end_exp3}}</div>
+            <div class="decsription ">{{resume.exp3_info|linebreaks}}
+            </div>
+            {% endif %} {% endif %}
+            <div class="maintitle">Education</div>
+            {% if resume.clg %}
+            <div class="title">{{resume.clg}}</div>
+            <div class="date">{{resume.start_clg}} to {{resume.end_clg}}</div>
+            <div class="decsription ">CPI/Perc: {{resume.clg_cg}}
+            </div>
+            {% endif %} {% if resume.edu %}
+            <div class="title">{{resume.edu}}</div>
+            <div class="date">{{resume.start_edu}} to {{resume.end_edu}}</div>
+            <div class="decsription ">CPI/Perc: {{resume.edu_cg}}
+            </div>
+            <br> {% endif %} {% if resume.Achievments %}
+            <div class="maintitle">Achievments</div>
+            <div class="decsription">{{resume.Achievments|linebreaks}}</div>
+            {% endif %} {% if resume.Skills %}
+            <div class="maintitle">Technical Skills</div>
+            <div class="decsription">{{resume.Skills|linebreaks}}</div>
+            {% endif %} {% if resume.Por %}
+            <div class="maintitle">Position Of Responsibility</div>
+            <div class="decsription">{{resume.Por|linebreaks}}</div>
+            {% endif %} {% if resume.Hobbies %}
+            <div class="maintitle">Hobbies</div>
+            <div class="decsription">{{resume.Hobbies|linebreaks}}</div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+<button class="btn btn-primary" id="download">download pdf</button>
+
+</html>
