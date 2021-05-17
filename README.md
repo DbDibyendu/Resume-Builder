@@ -1,7 +1,7 @@
 
 <img src="https://github.com/DbDibyendu/Resume-Builder/blob/main/main/static/images/resume.png?raw=true" width="150">
 
-# Resume-Builder [Link](https://db-cli.herokuapp.com/)
+# [Resume-Builder](https://db-cli.herokuapp.com/)
 
 Quick and Easy Official Resume Builder for your College. 
 
