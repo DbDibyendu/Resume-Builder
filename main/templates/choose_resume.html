@@ -8,9 +8,16 @@
         <div class="dashboardheader">Choose the Resume you want to Print</div>
     </div>
     {% for r in resumes %}
-    <ul>
-        <li>{{r.profile_name}}
-            <a href="{% url 'choose_template' r.id %}" class="edit"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe8dc;</i></a>
-        </li>
-    </ul>
-    {% endfor %} {% endblock %}
+    <div class="container">
+        <ul>
+            <div class="row">
+                <div class="resume_name">{{r.profile_name}}</div>
+                <a href="{% url 'choose_template' r.id %}" class="edit">
+                    <div class="symbols"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe8dc;</i></div>
+                </a>
+            </div>
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

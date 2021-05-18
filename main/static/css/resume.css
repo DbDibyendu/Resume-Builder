@@ -191,8 +191,6 @@ a.button_print {
 }
 
 a.edit {
-    margin-left: 80%;
-    margin-right: 20px;
     color: #FFC107;
 }
 
@@ -216,4 +214,12 @@ a.choose {
     padding: auto;
     padding-top: 20px;
     text-align: center;
+}
+
+.resume_name {
+    width: 90%;
+}
+
+.symbols {
+    padding-right: 30px;
 }

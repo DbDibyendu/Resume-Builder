@@ -8,12 +8,19 @@
         <a href="{% url 'create_resume' %}" class="butto"><button class="button">+ Create Resume</button></a>
     </div>
     {% for r in resumes %}
-    <ul>
-        <li>{{r.profile_name}}
-            <a href="{% url 'update_resume' r.id %}" class="edit"><i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i></a>
-            <a href="{% url 'delete_resume' r.id %}" class="delete"><i class="material-icons" data-toggle="tooltip" title="delete">&#xE872;</i></a>
-        </li>
-    </ul>
+    <div class="container">
+        <ul>
+            <div class="row">
+                <div class="resume_name">{{r.profile_name}}</div>
+                <a href="{% url 'update_resume' r.id %}" class="edit">
+                    <div class="symbols"><i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i></div>
+                </a>
+                <a href="{% url 'delete_resume' r.id %}" class="delete">
+                    <div><i class="material-icons" data-toggle="tooltip" title="delete">&#xE872;</i></div>
+                </a>
+            </div>
+        </ul>
+    </div>
     {% endfor %}
     <div class="but row">
         <a href="{% url 'choose_resume' %}" class="button_print"><button class="button_print">Print Resume</button></a>

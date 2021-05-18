@@ -8,15 +8,30 @@
     <div class="but row">
         <div class="dashboardheader">Choose Any Of Your Desired Templates</div>
     </div>
-    <ul>
-        <li>IIT KGP Template
-            <a href="{% url 'view_template1' id %}" class="edit"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe865;</i></a>
-        </li>
-        <li>IIT Bombay Template
-            <a href="{% url 'view_template2' id %}" class="edit"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe865;</i></a>
-        </li>
-        <li>IIT Delhi Template
-            <a href="{% url 'view_template3' id %}" class="edit"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe865;</i></a>
-        </li>
-    </ul>
+    <div class="container">
+        <ul>
+            <div class="row">
+                <div class="resume_name">IIT KGP Template</div>
+                <a href="{% url 'view_template1' id %}" class="edit">
+                    <div class="symbols"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe865;</i></div>
+                </a>
+            </div>
+        </ul>
+        <ul>
+            <div class="row">
+                <div class="resume_name">IIT Bombay Template</div>
+                <a href="{% url 'view_template2' id %}" class="edit">
+                    <div class="symbols"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe865;</i></div>
+                </a>
+            </div>
+        </ul>
+        <ul>
+            <div class="row">
+                <div class="resume_name">IIT Delhi Template</div>
+                <a href="{% url 'view_template3' id %}" class="edit">
+                    <div class="symbols"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe865;</i></div>
+                </a>
+            </div>
+        </ul>
+    </div>
     {% endblock %}
