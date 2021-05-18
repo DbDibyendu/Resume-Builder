@@ -17,11 +17,11 @@ The project is made by me, to help students making their official college resume
 #####  Prerequisites
 What things you need to install the software and how to install them          
             
-1.Install Python3 along with pip : [reference](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server)   
+1.Install Python along with pip : [reference](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server)   
           
-2 Install Django
+2 Install all the dependencies
 ```
-$ python3 -m pip install Django
+$ pip install -r requirements.txt
 ```
 ##### Testing on local Server
 Clone this repository onto your system
