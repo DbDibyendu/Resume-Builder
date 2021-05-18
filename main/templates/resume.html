@@ -1,62 +1,24 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} {% block content %}
 
-
-<head>
-    <meta charset="utf-8" />
-    <title>Resume Builder</title>
-
-</head>
-
-<body>
-    <style>
-        .hello-msg {
-            font: bold;
-            font-size: 18px;
-            color: blueviolet;
-            margin-right: 20px;
-        }
-    </style>
-
-    <span class="hello-msg">Hello, {{request.user}}</span>
-    <div id="javascript_header">
-
+<div class="hello">
+    <h2>Hello, {{request.user}}</h2>
+</div>
+<div id="login-box" class="container">
+    <div class="but row">
+        <a href="{% url 'create_resume' %}" class="butto"><button class="button">+ Create Resume</button></a>
     </div>
-
-    <form>
-        <div class="form__header">
-            {% for r in resumes %}
-            <tr>
-                <td>{{r.profile_name}}</td>
-                <td>
-                    <a class="button" href="{% url 'update_resume' r.id %}">Update</a>
-                </td>
-                <td>
-                    <a class="button" href="{% url 'delete_resume' r.id %}">Delete</a>
-                </td>
-                <br>
-            </tr>
-            {% endfor %}
-        </div>
-
-        <div class="line-break "></div>
-
-        <a class="button " href="{% url 'create_resume' %} "> Create Resume</a>
-
-        <div class="line-break ">
-
-        </div>
-
-        <a class="button " href="{% url 'choose_resume' %}"> Print Resume</a>
-
-        <div class="line-break ">
-
-        </div>
-        <span> <a  class="hello-msg " href="{% url 'logout' %} ">Logout </a></span>
-    </form>
-
-</body>
+    {% for r in resumes %}
+    <ul>
+        <li>{{r.profile_name}}
+            <a href="{% url 'update_resume' r.id %}" class="edit"><i class="material-icons" data-toggle="tooltip" title="edit">&#xE254;</i></a>
+            <a href="{% url 'delete_resume' r.id %}" class="delete"><i class="material-icons" data-toggle="tooltip" title="delete">&#xE872;</i></a>
+        </li>
+    </ul>
+    {% endfor %}
+    <div class="but row">
+        <a href="{% url 'choose_resume' %}" class="button_print"><button class="button_print">Print Resume</button></a>
+    </div>
+</div>
 
 
-</html>
+{% endblock %}

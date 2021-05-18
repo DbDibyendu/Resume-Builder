@@ -1,24 +1,26 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %} {% block content %}
 
-<head>
-    <title>Delete Resume</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="{%  static  'css/style.css'  %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    h5 {
+        padding-top: 200px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: bold;
+    }
+    
+    .new {
+        background-color: #F44336;
+        border-radius: 5px;
+        color: white;
+    }
+</style>
 
-</head>
+<div class="hello">
+    <h5>Are you sure you want to delete "{{resume}}"?</h5>
 
-<body>
-    <p>
-        Are you sure you want to delete "{{resume}}"?</p>
     <form method="POST">
         {% csrf_token %}
         <a href="{% url 'resume' %}">Cancel</a>
-        <input type="submit" name="Confirm">
+        <input type="submit" name="Confirm" class="new">
     </form>
-</body>
-
-</html>
+</div>
+{% endblock %}

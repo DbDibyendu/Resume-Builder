@@ -1,33 +1,22 @@
-{% load static %}
+{% extends 'base.html' %} {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <title>Resume Builder</title>
-
-</head>
-
-<body>
-    <h3>Choose template</h3>
-
-    <div class="field">
-        <td>IIT Kgp Template</td>
-        <a class="button" href="{% url 'view_template1' id %}">Print</a>
-
+<div class="hello">
+    <h2>Hello, {{request.user}}</h2>
+</div>
+<div id="login-box" class="container">
+    <div class="but row">
+        <div class="dashboardheader">Choose Any Of Your Desired Templates</div>
     </div>
-    <br>
-    <div class="field">
-        <td>IIT Bombay Template</td>
-        <a class="button" href="{% url 'view_template2' id %}">Print</a>
-    </div>
-    <br>
-    <div class="field">
-        <td>IIT Delhi Template</td>
-        <a class="button" href="{% url 'view_template3' id %}">Print</a>
-    </div>
-
-</body>
-
-</html>
+    <ul>
+        <li>IIT KGP Template
+            <a href="{% url 'view_template1' id %}" class="edit"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe865;</i></a>
+        </li>
+        <li>IIT Bombay Template
+            <a href="{% url 'view_template2' id %}" class="edit"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe865;</i></a>
+        </li>
+        <li>IIT Delhi Template
+            <a href="{% url 'view_template3' id %}" class="edit"><i class="material-icons" data-toggle="tooltip" title="edit">&#xe865;</i></a>
+        </li>
+    </ul>
+    {% endblock %}
