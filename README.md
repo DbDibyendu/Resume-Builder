@@ -22,7 +22,7 @@ What things you need to install the software and how to install them
 ##### Testing on local Server
 1.Clone this repository onto your system
 ```
-$ git clone 
+$ git clone https://github.com/DbDibyendu/Resume-Builder.git
 $ cd Resume-Builder
 ```          
 2 Install all the dependencies
