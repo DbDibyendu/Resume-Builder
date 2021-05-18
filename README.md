@@ -29,7 +29,7 @@ $ cd Resume-Builder
 ```
 $ pip install -r requirements.txt
 ```
-3. Then migrate and run the server
+3.Then migrate and run the server
 ```
 $ python manage.py makemigrations
 $ python manage.py migrate
