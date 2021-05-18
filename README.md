@@ -18,18 +18,22 @@ The project is made by me, to help students making their official college resume
 What things you need to install the software and how to install them          
             
 1.Install Python along with pip : [reference](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server)   
-          
+
+##### Testing on local Server
+1.Clone this repository onto your system
+```
+$ git clone 
+$ cd Resume-Builder
+```          
 2 Install all the dependencies
 ```
 $ pip install -r requirements.txt
 ```
-##### Testing on local Server
-Clone this repository onto your system
+3. Then migrate and run the server
 ```
-$ cd Resume-Builder
-$ python3 manage.py makemigrations
-$ python3 manage.py migrate
-$ python3 manage.py runserver
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py runserver
 ```
 ### Basic Architecture of the Project
 
