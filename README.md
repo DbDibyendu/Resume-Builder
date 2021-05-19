@@ -42,7 +42,7 @@ $ python manage.py runserver
 ##### Features and resources
 - User Login, Signup facility is available for multiple user.
 - Javascript has been used for converting html page to pdf, for saving the resume in pdf format.
-- The database used is sqlite3 for local system, and heroku postgres is used for online deployment.
+- The database used is sqlite3 for local system, and heroku postgreSQL is used for online deployment.
 
 ### Contributers           
 - Back End : [Me](https://github.com/DbDibyendu)
