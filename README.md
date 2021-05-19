@@ -45,6 +45,6 @@ $ python manage.py runserver
 - The database used is sqlite3 for local system, and heroku postgres is used for online deployment.
 
 ### Contributers           
-- Back End : [Dibyendu](https://github.com/DbDibyendu)
-- Front End :  [Eshita](https://github.com/eshitachandwani)
+- Back End : [Me](https://github.com/DbDibyendu)
+- Front End :  [Me](https://github.com/DbDibyendu), [Eshita](https://github.com/eshitachandwani)
 
